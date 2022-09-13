@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/jwtspring?serverTimezone=UTC&useLegacyDatetimeCode=false&useUnicode=yes&characterEncoding=UTF-8&reWriteBatchedInserts=true&createDatabaseIfNotExist=true
+    password: Dothat998
+  jpa:
+    generate-ddl: 'true'
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+bezkoder:
+  app:
+    jwtExpirationMs: '86400000'
+    jwtSecret: bezKoderSecretKey
+server:
+  port: '8089'
